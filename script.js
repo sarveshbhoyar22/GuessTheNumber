@@ -116,7 +116,7 @@ btn.addEventListener("click", function (e) {
           remain.innerHTML = "It is lower than actual Number";
           remain.style.color = "white";
         }
-        console.log(c);
+        // console.log(c);
 
       }
     }
@@ -151,11 +151,11 @@ playbtn.addEventListener("click", function (e) {
 
 const guessValue = parseInt(guess.value);
 if (c >= parseInt(attempts.value)  || guessValue === random) {
-  console.log("yaha a gaya hu");
+  
   document.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
-      // e.preventDefault();
-      console.log("hii");
+      e.preventDefault();
+    
       pabtn.click();
     }
   });
@@ -164,7 +164,7 @@ if (c >= parseInt(attempts.value)  || guessValue === random) {
   guess.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
       e.preventDefault();
-      // console.log("hii");
+   
 
       btn.click();
     }
