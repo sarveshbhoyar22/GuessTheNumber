@@ -8,26 +8,30 @@
 </head>
 <style>
     body{
-        background-color: #155399;
-        /* background-color: #617285; */
+        background-color: #08113e;
+     
     }
-    .rule{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 15px;
-        padding: 10px;
-        width: 300px;
-        margin: 5px auto;
-        text-wrap: wrap;
-        color: white;
-        background-color:#7faeff;
    
-        border-radius: 10px;
-        box-shadow: 1px 1px 10px 1px black;
 
-    
+    .rules{
+        display: none;
+        font-family: Arial, Helvetica, sans-serif;
+  
+        margin-bottom: 10px;
+
+
     }
    
     .main{
+        border: 1px solid white;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px 1px black;
+
+        background-color: rgb(215, 228, 231);
+        width: 350px;
+        height:auto;
+        padding: 20px 10px;
+        margin:  40px auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -42,7 +46,7 @@
         margin: 10px auto;
         text-align: center;
         color: white;
-        background-color: black;
+        background-color: rgb(53, 53, 233);
         border-radius: 10px;
         box-shadow: 1px 1px 10px 1px black;
 
@@ -66,9 +70,10 @@
         background-color: #eaeff8;
         margin: 5px;
         text-align: center;
+        display:none;
     }
     .first{
-        width: 300px;
+        width: 200px;
         height: 30px;
         border-radius: 5px;
         border: none;
@@ -76,6 +81,7 @@
         margin: 5px;
         text-align: center;
     }
+   
     #btn{
 
         width: 206px;
@@ -85,13 +91,89 @@
         margin: 5px;
         cursor: pointer;
         transition: .2s ease;
-        background-color: rgb(123, 123, 136);
+        background-color: rgb(45, 53, 206);
+        color: rgb(255, 255, 255);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        display: none;
+
+        
+
+        
+    }
+    .play{
+
+        width: 206px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        margin: 5px;
+        cursor: pointer;
+        transition: .2s ease;
+        background-color: rgb(45, 53, 206);
         color: rgb(255, 255, 255);
         font-family: Arial, Helvetica, sans-serif;
         font-size: 15px;
 
         
-        /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+
+        
+    }
+    #pa{
+
+        width: 206px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        margin: 5px;
+        cursor: pointer;
+        transition: .2s ease;
+        background-color: rgb(45, 53, 206);
+        color: rgb(255, 255, 255);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        display: none;
+
+        
+
+        
+    }
+    .Rules{
+
+        width: 206px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        margin: auto;
+        cursor: pointer;
+        transition: .2s ease;
+        background-color: rgb(45, 53, 206);
+        color: rgb(255, 255, 255);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+
+        
+
+        
+    }
+
+    .score{
+
+        width: 206px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        margin: 5px;
+        cursor: pointer;
+        transition: .2s ease;
+        background-color: rgb(45, 53, 206);
+        color: rgb(255, 255, 255);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        display: none;
+
+        
+
         
     }
     .remain{
@@ -106,6 +188,10 @@
         align-content: center;
         border: none;
         background-color: #d3dae7;
+        display: none;
+        font-family: Arial, Helvetica, sans-serif;
+
+        
     }
     #count, .label{
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -119,16 +205,27 @@
         width: 100px;
         height: 60px;
         overflow: auto;
+        display: none;
+        font-family: Arial, Helvetica, sans-serif;
+
     }
-    #pg{
-        font-size:13px ;
+    #pg,#pg1{
+        font-size:medium ;
+        /* display: none; */
+        font-family: Arial, Helvetica, sans-serif;
+
     }
     .countplabel{
+        
         display: flex;
+        /* display: none; */
+        font-family: Arial, Helvetica, sans-serif;
+
+
     }
 
-    #btn:hover{
-        background-color: #7faeff;
+    button:hover{
+        background-color: rgb(39, 45, 143);
         /* color: rgb(34, 35, 36); */
         transform: scale(1.02);
         font-family: Arial, Helvetica, sans-serif;
@@ -137,7 +234,7 @@
         
 
     }
-    #btn:active{
+    button:active{
         background-color: rgb(100, 100, 100);
         color: aliceblue;
 
@@ -150,30 +247,42 @@
         transform: scale(0px);
       }
       100%{
-        transform: scale(5px);
+        transform: scale(15px);
       }
       }
 
 </style>
 <body>
-    <div class="rule">
-        <li>It has random No. between 1 and 1000</li>
-        <li>Guess the number </li>
-        <li>You have to enter No. of attempts you want, to guess the number.</li>
-        <!-- <span>Try and Guess a random Number between 1 and 100</span> 
-        <span>You Have 10 Attempts to guess the Right Number</span>  -->
     
-    </div>
     <div class="main">
         <div class="head">Guess The Number</div>
-         <div>
-                <input type="text" class ="first" placeholder="Enter Number of Attempts you want">
-            </div>
+      
+        
+        
         <div class="box">
+            
+            <div>
+                <input type="text" class ="first" placeholder="Enter Number of Attempts">
+            </div>
+        
             <div>
                 <input type="text" id="guess" placeholder="Enter Your Guess">
             </div>
+
+        <div class="rules">
+        <div style="display: flex; justify-content: center; margin: 10px;">How To Play? </div>
+        <li>It has random No. between 1 and 100.</li>
+        <li>Guess the number. </li>
+        <li>Enter No. of attempts you want.</li>
+      
+    
+        </div>
+
             <button id="btn"> Submit Guess </button>
+            <button id="pa"> Play Again </button>
+            <button class="play"> Play </button>
+            <button class="Rules"> Rules </button>
+            <button class="score"> Score </button>
             <div class="remain">Result</div>
             <div class="countplabel">
 
@@ -183,7 +292,7 @@
             </div>
 
             <div id="pguess" class="countplabel">
-                <div class="label" id="pg1">Previous Gusses</div>
+                <div class="label" id="pg1">Previous Guesses</div>
                 <div class="label" id="pg"> - </div>
             </div>
 
