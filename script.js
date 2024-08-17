@@ -212,6 +212,8 @@ rulesbtn.addEventListener("click", function (e) {
   rulesbtn.innerHTML = "Back";
   s2=true;}
   else{
+       rulesbtn.innerHTML = "Rules";
+
     attempts.style.display = "block";
     playbtn.style.display = "block";
   document.querySelector(".rules").style.display = "none";
