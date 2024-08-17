@@ -10,7 +10,7 @@ const scorebtn = document.querySelector(".score");
 const rulesbtn = document.querySelector(".Rules");
 const pabtn = document.querySelector("#pa");
 const random = Math.floor(Math.random() * 100) + 1;
-console.log(random);
+// console.log(random);
 let c = 0;
 const prevguess = [];
 
