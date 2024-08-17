@@ -5,7 +5,7 @@ const remain = document.querySelector(".remain");
 const body = document.querySelector("body");
 const guessSlot = document.querySelector("#pg");
 const attempts = document.querySelector(".first");
-const random = Math.floor(Math.random() * 100) + 1;
+const random = Math.floor(Math.random() * 1000) + 1;
 console.log(random);
 let c = 0;
 const prevguess = [];
@@ -16,8 +16,8 @@ btn.addEventListener("click", function (e) {
   count.innerHTML = c + 1;
   const guessValue = parseInt(guess.value);
   //validate the guess
-  if (guessValue < 1 || guessValue > 100 || isNaN(guessValue)) {
-    remain.innerHTML = "Enter a number between 1 and 100";
+  if (guessValue < 1 || guessValue > 1000 || isNaN(guessValue)) {
+    remain.innerHTML = "Enter a number between 1 and 1000";
     remain.style.backgroundColor = "yellow";
     remain.style.color = "black";
   } else {
